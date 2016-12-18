@@ -28,9 +28,14 @@
 >守护线程是特殊的线程，一般用于在后台为其他线程提供服务.
 Java中，isDaemon()：判断一个线程是否为守护线程.
 Java中，setDaemon()：设置一个线程为守护线程.
-java线程还可以分为前台线程（也称用户线程或普通线程)和后台线程（Daemon thread）,本篇就是要说明这两者的区别和用法。
+java线程还可以分为前台线程（也称用户线程或普通线程)和后台线程（Daemon thread）
 1.  后台线程会随着主程序的结束而结束，但是前台进程则不会；或者说，只要有一个前台线程未退出，进程就不会终止。（下面的例子会充分说明这一点）;
 2.  默认情况下，程序员创建的线程是用户线程；用setDaemon(true)可以设置线程为后台线程；而用isDaemon( )则可以判断一个线程是前台线程还是后台线程；
 3. jvm的垃圾回收器其实就是一个后台线程；
 4. setDaemon函数必须在start函数之前设定，否则会抛出IllegalThreadStateException异常;
+
+
+
+#写的比较好的博客
+* Java 多线程 并发编程http://blog.csdn.net/escaflone/article/details/10418651
 
