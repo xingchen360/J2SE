@@ -1,4 +1,4 @@
-# 作者：NoteShare 个人网址：itnoteshare.com
+# 作者：NoteShare 个人网址：http://itnoteshare.com
 # J2SE
 整理java最基础的重要知识点和常用基础工具类
 ## 20161218梳理了线程相关的知识点。目录com.noteshare.thread。
