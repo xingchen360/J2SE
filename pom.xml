@@ -19,6 +19,8 @@
 		<jdbc.driver.groupId>mysql</jdbc.driver.groupId>
 		<jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
 		<jdbc.driver.version>5.1.27</jdbc.driver.version>
+		<!-- itext  -->
+		<itext.version>4.2.2</itext.version>
 	</properties>
 
 	<dependencies>
@@ -248,6 +250,12 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>1.2.16</version>
+		</dependency>
+		<!-- itext -->
+		<dependency>
+		    <groupId>com.lowagie</groupId>
+		    <artifactId>itext</artifactId>
+		    <version>${itext.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
