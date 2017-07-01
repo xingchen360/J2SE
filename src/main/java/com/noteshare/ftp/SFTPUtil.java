@@ -280,7 +280,7 @@ public class SFTPUtil {
     }
     
     public static void main(String[] args) throws SftpException, IOException {
-        SFTPUtil sftp = new SFTPUtil("somnus", "passw0rd", "192.168.1.100", 22);
+        SFTPUtil sftp = new SFTPUtil("noteshare", "passw0rd", "192.168.1.100", 22);
         sftp.login();
         byte[] buff = sftp.download("./download", "abc.txt");
         System.out.println(Arrays.toString(buff));

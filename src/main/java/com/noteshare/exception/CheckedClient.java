@@ -44,7 +44,7 @@ public class CheckedClient {
      */
     public static void main(String[] args){
         CheckedClient client = new CheckedClient();
-        client.getClassSimpleName("com.somnus.exception.BizExceptio");
+        client.getClassSimpleName("com.noteshare.exception.BizExceptio");
         System.out.println("********************");
     }
 }

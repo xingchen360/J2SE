@@ -17,7 +17,7 @@ public class EachList {
 		/*Exception in thread "main" java.util.ConcurrentModificationException
 		at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
 		at java.util.ArrayList$Itr.next(ArrayList.java:851)
-		at com.somnus.ListTest.main(ListTest.java:13)*/
+		at com.noteshare.ListTest.main(ListTest.java:13)*/
 		/*for (String name : list) {
 			System.out.println(name);
 			list.remove(name);

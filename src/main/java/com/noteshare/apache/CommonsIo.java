@@ -158,7 +158,7 @@ public class CommonsIo {
     
     @Test
     public void write() throws IOException{
-        OutputStream os = new FileOutputStream(new File("target/classes/Somnus.txt"));
+        OutputStream os = new FileOutputStream(new File("target/classes/noteshare.txt"));
         try {
             /**写数据
              * write(byte[] data, OutputStream output)
@@ -174,7 +174,7 @@ public class CommonsIo {
              * write(String data, OutputStream output)
              * write(String data, OutputStream output, String encoding)
              */
-            IOUtils.write("Somnus罂粟花", os);
+            IOUtils.write("noteshare罂粟花", os);
         } finally{
             IOUtils.closeQuietly(os);
         }
