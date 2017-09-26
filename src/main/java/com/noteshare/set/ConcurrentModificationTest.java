@@ -14,6 +14,10 @@ import org.junit.Test;
 */
 @SuppressWarnings("boxing")
 public class ConcurrentModificationTest {
+	private static int i;
+	public static void main(String[] args) {
+		System.out.println(i);
+	}
     
     /**
      *  输出结果
@@ -29,14 +33,26 @@ public class ConcurrentModificationTest {
     @Test
     public void test1(){
         ArrayList<Integer> list = new ArrayList<Integer>();
+        //判断是否需要对数组扩容
+        //modCount++;
         list.add(2);
         Iterator<Integer> iterator = list.iterator();
+        //源码Itr：cursor != size;判断当前光标是否到达结尾
         while(iterator.hasNext()){
             System.out.println("====");
+            //先判断modCount != expectedModCount 成立则异常ConcurrentModificationException
+            //i = cursor
+            //i >= size NoSuchElementException
+            //i >= elementData.length  ConcurrentModificationException
+            // 否则cursor后移一位，指向下一个元素
             Integer integer = iterator.next();
             System.out.println("-----");
             if(integer==2){
                 System.out.println("++++++");
+                // modCount++;
+                // 然后把后面的元素往前移动一位，也就是数据拷贝if (numMoved > 0)System.arraycopy(elementData, index+1, elementData, index,numMoved);
+                // 将最后一个元素置为空
+                // 注意此时没有改变Itr中cursor的值，cursor为1而此时size为0故cursor!=size成立
                 list.remove(integer);
             }
         }
@@ -47,8 +63,12 @@ public class ConcurrentModificationTest {
     @Test
     public void test5(){
         CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>();
+        //加锁
+        //对数组扩容，赋值
+        //解锁
         list.add(2);
         Iterator<Integer> iterator = list.iterator();
+        //cursor < snapshot.length
         while(iterator.hasNext()){
             System.out.println("====");
             Integer integer = iterator.next();
@@ -56,6 +76,7 @@ public class ConcurrentModificationTest {
             if(integer==2){
                 System.out.println("++++++");
                 list.remove(integer);
+                System.out.println(list.size());
             }
         }
     }
@@ -77,6 +98,7 @@ public class ConcurrentModificationTest {
             System.out.println("-----");
             if(integer==2){
                 System.out.println("++++++");
+                //有做expectedModCount = modCount;
                 iterator.remove();
             }
         }
@@ -128,12 +150,15 @@ public class ConcurrentModificationTest {
         Iterator<Integer> iterator = list.iterator();
         while(iterator.hasNext()){
             System.out.println("====");
+            //if (! hasNext()) NoSuchElementException否则直接取值cursor后移一位
             Integer integer1 = iterator.next();
             System.out.println("integer1:" + integer1);
             System.out.println(iterator.hasNext());
+            //单纯的数组扩容和snapshot无太大关系，所以snapshot的长度应该是没改变
             list.add(4);
+            //cursor < snapshot.length  ：cursor改变了而snapshot未改变所以异常了 
             System.out.println(iterator.hasNext());
-            Integer integer2 = iterator.next();//此处异常
+            Integer integer2 = iterator.next();//此处异常---NoSuchElementException
             System.out.println("-----integer2:" + integer2);
         }
     }
