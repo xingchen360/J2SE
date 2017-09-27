@@ -2,6 +2,7 @@ package com.noteshare.set;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.junit.Test;
@@ -14,10 +15,6 @@ import org.junit.Test;
 */
 @SuppressWarnings("boxing")
 public class ConcurrentModificationTest {
-	private static int i;
-	public static void main(String[] args) {
-		System.out.println(i);
-	}
     
     /**
      *  输出结果
@@ -162,4 +159,79 @@ public class ConcurrentModificationTest {
             System.out.println("-----integer2:" + integer2);
         }
     }
+    public static void main(String[] args) {
+        testList1();
+    }
+    
+    /**
+     * 分析面试题中的一个坑,答出来了的应java底层技术还是比较扎实
+     * 以下代码是否有异常或报错，如果有请做原因分析
+     * 答案有异常：在for循环处报异常java.util.ConcurrentModificationException
+     * 原因分析：
+     * 此代码中for循环()内部相当于做了Iterator的hasNext()判断和调用了next()方法
+     * hasNext会判断指针cursor指向的元素索引是否等于集合大小size，开始cursor为0；
+     * 而next取值前会进行modCount和expectedModCount的相等判断，不相等则报异常ConcurrentModificationException
+     * 开始modCount和expectedModCount均为0
+     * 第一次循环时由于调用list.remove会改变modCount的值  +1了导致第二次循环时取next的时候报异常
+     */
+    private static void testList1(){
+        List list = new ArrayList();
+        list.add("1");
+        list.add("3");
+        list.add("4");
+        for(Object object : list) {
+            if("1".equals(object)){
+                list.remove(object);
+            }
+        }
+    }
+    /**
+     * 分析面试题中的一个坑,答出来了的应java底层技术还是比较扎实
+     * 以下代码是否有异常或报错，如果有请做原因分析
+     * 答案有异常：无异常无报错，但是写法有问题
+     * 原因分析：
+     * 此代码中for循环()内部相当于做了Iterator的hasNext()判断和调用了next()方法
+     * hasNext会判断指针cursor指向的元素索引是否等于集合大小size，开始cursor为0；
+     * 开始modCount和expectedModCount均为0
+     * 第二次循环时由于调用list.remove会改变modCount的值  +1，此时由于list的长度变为2了，而此时的cursor也正好指向2，当要进行第三次for
+     * 循环时由于先判断hasNext是否成立，此时由于cursor==size，所以不会执行next取值，故循环执行了两次后结束，并不会触发异常。
+     */
+    private static void testList2(){
+        List list = new ArrayList();
+        list.add("1");
+        list.add("3");
+        list.add("4");
+        for(Object object : list) {
+            if("3".equals(object)){
+                list.remove(object);
+            }
+        }
+    }
+    /**
+     * 以下代码是否有异常或问题，如果没问题输出结果是什么
+     * 答案：无报错异常，但是写法有问题
+     * 输出结果为：
+     * size：3
+     * 1
+     * ==
+     * size：2
+     * 4
+     */
+    private static void testList3(){
+        List list = new ArrayList();
+        list.add("1");
+        list.add("3");
+        list.add("4");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("size:" + list.size());
+            Object obj = list.get(i);
+            System.out.println(obj);
+            if("1".equals(obj)){
+                System.out.println("==");
+                list.remove(obj);
+            }
+        }
+    }
+    
+    
 }
