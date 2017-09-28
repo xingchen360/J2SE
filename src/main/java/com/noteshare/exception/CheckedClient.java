@@ -46,5 +46,6 @@ public class CheckedClient {
         CheckedClient client = new CheckedClient();
         client.getClassSimpleName("com.noteshare.exception.BizExceptio");
         System.out.println("********************");
+        throw new RuntimeException("");
     }
 }
