@@ -13,7 +13,6 @@ public class MyFilter implements Filter{
 
     @Override
     public boolean isLoggable(LogRecord record) {
-        System.out.println(record.getMessage());
         if(record.getMessage().contains("NoteShare")){
             return false;
         }else{

@@ -26,7 +26,8 @@ public class JdkLog {
     public static void main(String[] args) {
         JdkLog jdkLog = new JdkLog();
         //jdkLog.printLogLevel();
-        jdkLog.testMemoryHandler();
+        //jdkLog.testMemoryHandler();
+        jdkLog.testSocketHandler();
     }
     /**
      * 禁用: OFF
@@ -114,5 +115,17 @@ public class JdkLog {
         logger.warning("========你好啊啊啊啊啊 啊4============");
         logger.info("========NoteShare5============");
         logger.info("========你好啊啊啊啊啊 啊6============");
+    }
+    /**
+     * @Title			: testSocketHandler 
+     * @Description		: 测试将日志发送到socket端
+     * socket端接收到如下信息：com.noteshare.socket.Server
+     * 服务器接收到客户端的连接请求1：九月 29, 2017 9:09:48 下午 com.noteshare.log.jdk.JdkLog testSocketHandler
+     * @author 			： NoteShare
+     * @date 			： 2017年9月29日 下午9:10:01 
+     * @throws
+     */
+    private void testSocketHandler(){
+    	logger.info("hello world");
     }
 }

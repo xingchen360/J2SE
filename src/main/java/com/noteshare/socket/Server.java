@@ -1,8 +1,9 @@
 package com.noteshare.socket;
 
-import java.io.DataInputStream;
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -17,7 +18,7 @@ public class Server {
      * * 而后才可以向客户端发送信息，否则将会有运行时出错。　　
      * 
      * */
-    public static void main(String[] args) {
+	public static void main(String[] args) {
         ServerSocket ss = null;
         try {
             ss = new ServerSocket(8888);
@@ -26,15 +27,15 @@ public class Server {
             //用于向客户端发送数据的输出流　　
             DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
             //用于接收客户端发来的数据的输入流　　
-            DataInputStream dis = new DataInputStream(socket.getInputStream());
-            System.out.println("服务器接收到客户端的连接请求1：" + dis.readUTF());
-            System.out.println("服务器接收到客户端的连接请求2：" + dis.readInt());
+            InputStreamReader isr = new InputStreamReader(socket.getInputStream(),"UTF-8");
+            BufferedReader br = new BufferedReader(isr);
+            System.out.println("服务器接收到客户端的连接请求1：" + br.readLine());
             //服务器向客户端发送连接成功确认信息　　
             dos.writeUTF("接受连接请求，连接成功1!");
             dos.writeUTF("接受连接请求，连接成功2!");
             //不需要继续使用此连接时，关闭连接　　
-            socket.close();
-            ss.close();
+            //socket.close();
+            //ss.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
