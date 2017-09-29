@@ -25,9 +25,8 @@ public class JdkLog {
     
     public static void main(String[] args) {
         JdkLog jdkLog = new JdkLog();
-        for (int i = 0; i < 1; i++) {
-            jdkLog.printLogLevel();
-        }
+        //jdkLog.printLogLevel();
+        jdkLog.testMemoryHandler();
     }
     /**
      * 禁用: OFF
@@ -94,5 +93,26 @@ public class JdkLog {
         */        
         logger.info("++++++++++++++++++++++++");
         logger.log(new LogRecord(Level.WARNING, "warning"));
+    }
+    /**
+     * 测试内存处理器
+     * 输出结果：
+     *  2017-09-29 16:51:25 调用日志的类：com.noteshare.log.jdk.JdkLog printLog2 级别：INFO 日志内容为：=====================MemoryHandler============== throwable: 
+        2017-09-29 16:51:25 调用日志的类：com.noteshare.log.jdk.JdkLog printLog2 级别：INFO 日志内容为：========noteShare2============ throwable: 
+        2017-09-29 16:51:25 调用日志的类：com.noteshare.log.jdk.JdkLog printLog2 级别：INFO 日志内容为：========你好啊啊啊啊啊 啊3============ throwable: 
+        2017-09-29 16:51:25 调用日志的类：com.noteshare.log.jdk.JdkLog printLog2 级别：WARNING 日志内容为：========你好啊啊啊啊啊 啊4============ throwable:
+                        由此可见：第二条被过滤器给过滤掉了，只运行了前5条，因为我们配置的缓存记录数为5，为打印控制台，是因为我们配置的target是控制台，如果我们配置的是文件输出则将输出到文件中，此也经过测试确实如此
+                        此处其记录条数把过滤器排除的也算上感觉不太合理，此处不做过分评论，个人理解。 
+        
+     */
+    private void testMemoryHandler(){
+        /*测试MemoryHandler的功能*/
+        logger.info("=====================MemoryHandler==============");
+        logger.info("========NoteShare1============");
+        logger.info("========noteShare2============");
+        logger.info("========你好啊啊啊啊啊 啊3============");
+        logger.warning("========你好啊啊啊啊啊 啊4============");
+        logger.info("========NoteShare5============");
+        logger.info("========你好啊啊啊啊啊 啊6============");
     }
 }
