@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 /**
 * @Title:  jdk自带的日志组件功能测试
 * @des  :  读取src/main/resources/logging.properties文件中的日志配置信息，将日志根据配置进行持久化
-* @since   JDK1.6
 * @history 2017年9月28日
 * @author NoteShare
 */
