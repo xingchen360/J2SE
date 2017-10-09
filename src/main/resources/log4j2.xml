@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 注意根节点增加了一个monitorInterval属性，含义是每隔300秒重新读取配置文件，可以不重启应用的情况下修改配置，还是很好用的功能。 -->
+<Configuration status="WARN" monitorInterval="300">
+	<!-- 配置常量 -->
+	<properties>  
+        <property name="LOG_HOME">D:/logs</property>  
+        <property name="FILE_NAME">log4j2</property>  
+    </properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<Console name="Console_mylog" target="SYSTEM_OUT">
+			<PatternLayout pattern="%F\t %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<!-- 自定义Appender，指定日志输出到指定文件中 -->
+		<File name="MyFile" fileName="D:/logs/log4j2_test.log">  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+        </File>
+        <!-- 自定义回滚输出器 
+        	fileName  指定当前日志文件的位置和文件名称
+        	filePattern  指定当发生Rolling时，文件的转移和重命名规则
+        	SizeBasedTriggeringPolicy  指定当文件体积大于size指定的值时，触发Rolling
+        	DefaultRolloverStrategy  指定最多保存的文件个数
+        	TimeBasedTriggeringPolicy  这个配置需要和filePattern结合使用，注意filePattern中配置的文件重命名规则是${FILE_NAME}-%d{yyyy-MM-dd HH-mm}-%i，
+        	最小的时间粒度是mm，即分钟，就是每1分钟生成一个新文件。如果改成%d{yyyy-MM-dd HH}，
+        	最小粒度为小时，则每一个小时生成一个文件。
+        	TimeBasedTriggeringPolicy指定的size是1 此参数没弄明白，除了改为0有变化外，改为其他值未看到变化，和网上的一些描述也不相符，暂时记录下。
+        	以下配置大致意思为：每分钟内根据文件大小来形成文件，如果每分钟的日志文件不超过配置的回滚大小则只生成一个日志文件，如果超过回滚大小则根据大小切分成多个文件,每分钟内形成的日志文件
+        	只保留最新的2个（注意：是每分钟内的日志文件不是所有只保留2个）。
+        -->
+        <RollingRandomAccessFile name="MyRollingFile"  
+            fileName="${LOG_HOME}/${FILE_NAME}.log"  
+            filePattern="${LOG_HOME}/$${date:yyyy-MM-dd}/${FILE_NAME}-%d{yyyy-MM-dd HH-mm}-%i.log">  
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+            <Policies>  
+                <TimeBasedTriggeringPolicy interval="1" />  
+                <SizeBasedTriggeringPolicy size="2 KB" />
+            </Policies>  
+            <DefaultRolloverStrategy max="2" />  
+        </RollingRandomAccessFile>
+	</Appenders>
+	<Loggers>
+		<!-- 自定义log，设置输出级别为trace 
+			additivity="false"表示在该logger中输出的日志不会再延伸到父层logger。这里如果改为true，则会延伸到Root Logger，遵循Root Logger的配置也输出一次
+		-->
+		<Logger name="mylog" level="trace" additivity="false">
+			<AppenderRef ref="Console_mylog" />
+			<!-- 添加输出方式 -->
+			<AppenderRef ref="MyFile"/>
+		</Logger>
+		<!-- 自定义回滚输出器 -->
+		<Logger name="MyRollingFile" level="trace" additivity="false">
+			<AppenderRef ref="MyRollingFile" />
+		</Logger>
+		<Root level="error">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
