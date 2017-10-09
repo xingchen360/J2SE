@@ -4,9 +4,8 @@ import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
 /**
-* @Title:
+* @Title:  自定义过滤器
 * @author  NoteShare
-* @since   JDK1.6
 * @history 2017年9月29日
 */
 public class MyFilter implements Filter{
