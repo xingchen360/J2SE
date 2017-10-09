@@ -1,4 +1,4 @@
-package com.noteshare.log.jdk.log4j2;
+package com.noteshare.log.log4j2;
 
 import java.io.BufferedInputStream;
 import java.io.File;
