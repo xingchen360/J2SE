@@ -19,7 +19,7 @@ public class EagerlySingleton {
     }
     /**
      * @Title      	: getInstance 
-     * @Description	: 开发对外的获取实例的方法
+     * @Description	: 开放对外的获取实例的方法
      * @author     	: NoteShare
      * Create Date 	: 2017年10月24日 下午4:09:19
      * @return

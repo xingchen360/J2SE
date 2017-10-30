@@ -33,7 +33,7 @@ public class LazySingleton {
         return lazySingleton;
     }
     /**
-     * @Title      	: getSyncInstance 
+     * @Title      	: getSyncInstance
      * @Description	: 同步的获取对象的方法
      *                同步方法方式：性能不高，同步范围太大，在实例化instacne后，获取实例仍然是同步的，效率太低，需要缩小同步的范围。
      * @author     	: NoteShare
