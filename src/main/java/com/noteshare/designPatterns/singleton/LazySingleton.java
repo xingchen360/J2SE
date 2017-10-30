@@ -2,8 +2,7 @@ package com.noteshare.designPatterns.singleton;
 
 
 /**
-* @Title:http://blog.csdn.net/glory1234work2115/article/details/50814419
-                           
+* @Title:  懒汉模式
 * @author  NoteShare
 * @since   JDK1.8
 * @history 2017年10月24日
@@ -65,6 +64,7 @@ public class LazySingleton {
         }
         return lazySingleton;
     }
+    
     /**
      * @Title      	: getInstanceByDoubleCheck 
      * @Description	: 缺点：避免的上面方式的明显缺点，但是java内存模型（jmm）并不限制处理器重排序，在执行instance=new Singleton()；时，并不是原子语句，实际是包括了下面三大步骤：
