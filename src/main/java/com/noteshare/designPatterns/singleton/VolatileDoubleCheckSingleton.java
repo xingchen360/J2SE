@@ -1,9 +1,8 @@
 package com.noteshare.designPatterns.singleton;
 
-
 /**
 * @Title:  在JDK1.5之后，使用volatile关键字修饰instance就可以实现正确的double check单例模式了
-* @author  陈海新
+* @author  NoteShare
 * @since   JDK1.8
 * @history 2017年10月27日
 */
