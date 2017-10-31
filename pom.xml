@@ -64,6 +64,12 @@
 		<servletapi.version>6.0.53</servletapi.version>
 		<!-- log4j2 -->
 		<log4j2.version>2.9.1</log4j2.version>
+		<!-- mybatis-generator-core -->
+		<mybatisgenerator.version>1.3.5</mybatisgenerator.version>
+		<!-- mybatis基础包 -->
+		<mybatis.version>3.4.5</mybatis.version>
+		<!-- mybatis ognl -->
+		<mybatisognl.version>3.1.15</mybatisognl.version>
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -303,6 +309,28 @@
 		    <version>${log4j2.version}</version>
 		</dependency>
 		<!-- log4j2 end -->
+		
+		<!-- Mybatis 相关jar  start -->
+		<!-- 基础包 -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>${mybatis.version}</version>
+		</dependency>
+		<!-- 代码生成工具包 MyBatis Generator  a code generator for MyBatis and iBatis.-->
+		<dependency>
+		    <groupId>org.mybatis.generator</groupId>
+		    <artifactId>mybatis-generator-core</artifactId>
+		    <scope>test</scope>
+		    <version>${mybatisgenerator.version}</version>
+		</dependency>
+		<!-- 此jar是mybatis Compile Dependencies依赖的jar，此处只是下载下来学习下无其他作用 -->
+		<dependency>
+		    <groupId>ognl</groupId>
+		    <artifactId>ognl</artifactId>
+		    <version>${mybatisognl.version}</version>
+		</dependency>
+		<!-- Mybatis 相关jar  end -->
 	</dependencies>
 	<build>
 		<plugins>
