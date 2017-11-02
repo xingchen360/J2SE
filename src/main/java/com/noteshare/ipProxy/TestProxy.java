@@ -14,6 +14,11 @@ import org.jsoup.select.Elements;
 /**
  * @ClassName	: TestProxy 
  * @Description	: dos下命令运行：java -cp .:jsoup-1.10.3.jar  -Dfile.encoding=UTF-8 TestProxy > success.log 2>error.log &
+ *  ip代理地址：
+ *  http://www.xicidaili.com/wt
+    http://www.kuaidaili.com/free/intr/2/
+    http://blog.csdn.net/zzq1992126/article/details/51434085
+    http://blog.csdn.net/llqqxf/article/details/51881281
  * @author 		: NoteShare
  * @date 		: 2017年11月1日 下午6:05:16
  */
@@ -33,7 +38,7 @@ public class TestProxy {
                     int port = Integer.parseInt(((Element) td.get(1)).text());
                     String type = ((Element) td.get(3)).text();
                     try {
-                        URL u = new URL("http://itnoteshare.com/note/355/publicNoteDetail.htm");
+                        URL u = new URL("url链接");
                         HttpURLConnection urlConnection = (HttpURLConnection) u.openConnection(new Proxy("HTTP".equals(type) ? Proxy.Type.HTTP : Proxy.Type.SOCKS, new InetSocketAddress(ip, port)));
                         urlConnection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
                         urlConnection.setConnectTimeout(3000);
