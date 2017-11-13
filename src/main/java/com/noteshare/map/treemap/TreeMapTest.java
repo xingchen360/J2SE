@@ -1,6 +1,7 @@
 package com.noteshare.map.treemap;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -19,6 +20,7 @@ public class TreeMapTest {
     }
     //注意key不要放太简单的数据不然测试一直是排序的如a、b、c....，用较复杂的数据做测试
     public static void test1(){
+        //HashMap<String,String> map = new HashMap<String,String>();
         //TreeMap<String,Integer> map = new TreeMap<String, Integer>(Collections.reverseOrder());
         //TreeMap<String,String> map = new TreeMap<String, String>(Collections.reverseOrder());
         TreeMap<String,String> map = new TreeMap<String, String>();
