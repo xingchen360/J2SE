@@ -22,7 +22,6 @@ public class TextFileDisplayer implements Doer{
 			try {
 				while ((c = fr.read()) != -1) {
 					caw.write(c);
-					
 				}
 				System.out.println(caw.toString());
 			} catch (IOException e) {
