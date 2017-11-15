@@ -1,4 +1,4 @@
-package com.noteshare.jvm.typelifecycle;
+package com.noteshare.jvm.typelifecycle.activeAndPassiceUse;
 
 /**
 * @Title:  如果一个字段既是静态（static）的又是最终的（final）的，并且使用一个编译时常量表达式初始化，

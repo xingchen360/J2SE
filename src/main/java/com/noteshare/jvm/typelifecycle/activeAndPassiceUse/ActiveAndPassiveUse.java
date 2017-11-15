@@ -1,4 +1,4 @@
-package com.noteshare.jvm.typelifecycle;
+package com.noteshare.jvm.typelifecycle.activeAndPassiceUse;
 
 /**
 * @Title:  被动使用示例
