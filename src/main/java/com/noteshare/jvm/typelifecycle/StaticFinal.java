@@ -36,7 +36,7 @@ public class StaticFinal{
 
 interface Angry {
 
-    String greeting = "Grrrr";
+    String greeting = "Grrrr";//接口中的属性默认是public static final
 
     int angerLevel = Dog.getAngerLevel();
 
