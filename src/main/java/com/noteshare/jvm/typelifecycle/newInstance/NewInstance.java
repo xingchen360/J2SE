@@ -18,6 +18,7 @@ public class NewInstance implements Cloneable {
 		System.out.println(msg);
 	}
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws Exception {
 		/** 
 		 * 以下结果中发现clone未调用构造方法，此处需要探究下

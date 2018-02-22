@@ -40,7 +40,8 @@ public class JdkLog {
      * debug            FINE、FINER
      * trace            FINEST
      */
-    private void printLogLevel(){
+    @SuppressWarnings("unused")
+	private void printLogLevel(){
     	/*
     	九月 28, 2017 10:55:25 下午 com.noteshare.log.jdk.JdkLog printLogLevel
     	禁用: OFF
@@ -105,7 +106,8 @@ public class JdkLog {
                         此处其记录条数把过滤器排除的也算上感觉不太合理，此处不做过分评论，个人理解。 
         
      */
-    private void testMemoryHandler(){
+    @SuppressWarnings("unused")
+	private void testMemoryHandler(){
         /*测试MemoryHandler的功能*/
         logger.info("=====================MemoryHandler==============");
         logger.info("========NoteShare1============");

@@ -174,7 +174,8 @@ public class ConcurrentModificationTest {
      * 开始modCount和expectedModCount均为0
      * 第一次循环时由于调用list.remove会改变modCount的值  +1了导致第二次循环时取next的时候报异常
      */
-    private static void testList1(){
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	private static void testList1(){
         List list = new ArrayList();
         list.add("1");
         list.add("3");
@@ -196,7 +197,8 @@ public class ConcurrentModificationTest {
      * 第二次循环时由于调用list.remove会改变modCount的值  +1，此时由于list的长度变为2了，而此时的cursor也正好指向2，当要进行第三次for
      * 循环时由于先判断hasNext是否成立，此时由于cursor==size，所以不会执行next取值，故循环执行了两次后结束，并不会触发异常。
      */
-    private static void testList2(){
+    @SuppressWarnings({ "unused", "unchecked", "rawtypes" })
+	private static void testList2(){
         List list = new ArrayList();
         list.add("1");
         list.add("3");
@@ -217,8 +219,9 @@ public class ConcurrentModificationTest {
      * size：2
      * 4
      */
-    private static void testList3(){
-        List list = new ArrayList();
+    @SuppressWarnings({ "unchecked", "unused", "rawtypes" })
+	private static void testList3(){
+		List list = new ArrayList();
         list.add("1");
         list.add("3");
         list.add("4");

@@ -33,7 +33,8 @@ public class FinalTest2 extends FinalTest1{
         System.out.println("FinalTest2-test1");
     }*/
     
-    public static void main(String[] args) {
+    @SuppressWarnings("static-access")
+	public static void main(String[] args) {
         FinalTest1.test1();
         FinalTest1.test2();
         FinalTest1 test1 = new FinalTest1();

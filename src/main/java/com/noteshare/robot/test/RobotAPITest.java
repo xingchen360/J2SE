@@ -2,7 +2,6 @@ package com.noteshare.robot.test;
 
 import java.awt.Color;
 import java.awt.Rectangle;
-import java.awt.RenderingHints.Key;
 import java.awt.Robot;
 import java.awt.image.BufferedImage;
 import java.io.File;

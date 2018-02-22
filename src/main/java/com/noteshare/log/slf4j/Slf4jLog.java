@@ -33,7 +33,8 @@ public class Slf4jLog {
         </dependency>
                         所以会自动下载slf4j-api的jar。
      */
-    private void testSlf4jTojdkLog(){
+    @SuppressWarnings("unused")
+	private void testSlf4jTojdkLog(){
         /**
          * 注意：此处我写死了引入的是java.util.logging的配置文件，其实实际项目中只需把相应的日志组件的配置文件放入根目录即可，此处是为了测试所以故意写死依赖
          * 方便区分使用的是那套日志组件

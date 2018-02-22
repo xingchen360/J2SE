@@ -16,11 +16,9 @@ public class GenericDemo {
     /*public void add(<? super Cat> a){
         
     }*/
-    @SuppressWarnings("hiding")
     public void add(List<?> list){
         
     }
-    @SuppressWarnings("hiding")
     public Animal save(List<? extends Animal> list){
         if(list != null && list.size()>0){
         	Animal animal = Animal.class.cast(list.get(0));
@@ -28,7 +26,6 @@ public class GenericDemo {
         }
 		return null;
     }
-    @SuppressWarnings("hiding")
     public Animal save2(List<? super Cat> list){
     	if(list != null && list.size()>0){
         	Animal animal = Animal.class.cast(list.get(0));

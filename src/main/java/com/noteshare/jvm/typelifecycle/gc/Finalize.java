@@ -14,7 +14,8 @@ package com.noteshare.jvm.typelifecycle.gc;
 * @history 2017年11月16日
 */
 public class Finalize {
-    public static void main(String[] args) {
+    @SuppressWarnings("unused")
+	public static void main(String[] args) {
         Final obj = new Final();
         obj = null;
         //obj.finalize();
