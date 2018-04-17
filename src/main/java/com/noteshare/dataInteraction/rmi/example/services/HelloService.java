@@ -1,4 +1,4 @@
-package com.noteshare.rmi.example.services;
+package com.noteshare.dataInteraction.rmi.example.services;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

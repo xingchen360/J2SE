@@ -1,4 +1,4 @@
-package com.noteshare.rmi.example.client;
+package com.noteshare.dataInteraction.rmi.example.client;
 
 import java.rmi.RemoteException;
 
@@ -6,7 +6,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import com.noteshare.rmi.example.services.HelloService;
+import com.noteshare.dataInteraction.rmi.example.services.HelloService;
 /**
  * @ClassName			: Client 
  * @Description			: 客户端调用只需把服务端提供的接口定义下然后编写客户端调用程序即可调用服务端代码，注意接口的包需要和服务端一致否则会报错

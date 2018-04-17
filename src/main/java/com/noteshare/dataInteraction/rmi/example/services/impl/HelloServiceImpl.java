@@ -1,9 +1,9 @@
-package com.noteshare.rmi.example.services.impl;
+package com.noteshare.dataInteraction.rmi.example.services.impl;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-import com.noteshare.rmi.example.services.HelloService;
+import com.noteshare.dataInteraction.rmi.example.services.HelloService;
 
 // Inherit UnicastRemoteObject and implement HelloService interface  
 public class HelloServiceImpl extends UnicastRemoteObject implements HelloService {

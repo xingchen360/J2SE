@@ -1,4 +1,4 @@
-package com.noteshare.rmi.example.server;
+package com.noteshare.dataInteraction.rmi.example.server;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -7,8 +7,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import com.noteshare.rmi.example.services.HelloService;
-import com.noteshare.rmi.example.services.impl.HelloServiceImpl;
+import com.noteshare.dataInteraction.rmi.example.services.HelloService;
+import com.noteshare.dataInteraction.rmi.example.services.impl.HelloServiceImpl;
 /**
  * 
  * @ClassName			: Server 
