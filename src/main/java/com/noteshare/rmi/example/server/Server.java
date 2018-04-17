@@ -14,6 +14,7 @@ import com.noteshare.rmi.example.services.impl.HelloServiceImpl;
  * @ClassName			: Server 
  * @Description			: Remote Method Invoke 服务器端
  * RMI框架分别为远程对象生成了客户端代理和服务器端代理，位于客户端的代理称为存根（Stub），位于服务器端的代理称为骨架（Skeleton）
+ * 他也有它的缺点，他只能通过RMI协议来进行访问无法通过HTTP协议访问，无法穿透防火墙
  * @author 				： NoteShare 
  * @date 				： 2018年4月15日 下午10:29:22
  */
