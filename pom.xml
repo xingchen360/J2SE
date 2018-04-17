@@ -77,6 +77,8 @@
 		<activemqAll.version>5.15.3</activemqAll.version>
 		<!-- freemarker -->
 		<freemarker.version>2.3.23</freemarker.version>
+		<!-- hessian 轻量级的remoting onhttp工具，使用简单的方法提供了RMI的功能。 相比WebService，Hessian更简单、快捷，采用的是二进制RPC协议 -->
+		<hessian.version>4.0.51</hessian.version>
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -86,7 +88,6 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
 		<!--******** logback and slf4j ******** -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -366,6 +367,13 @@
 		    <version>${freemarker.version}</version>
 		</dependency>
 		<!-- freemarker jar 包添加 end -->
+		<!-- hessian jar 包添加 start -->
+		<dependency>
+		    <groupId>com.caucho</groupId>
+		    <artifactId>hessian</artifactId>
+		    <version>${hessian.version}</version>
+		</dependency>
+		<!-- hessian jar 包添加 end -->
 	</dependencies>
 	<build>
 		<plugins>
@@ -380,7 +388,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
 	<!-- 指定Maven仓库 -->
 	<repositories>
 		<repository>
@@ -394,6 +401,5 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-
 	</repositories>
 </project>

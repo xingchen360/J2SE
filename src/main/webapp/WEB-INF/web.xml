@@ -11,4 +11,19 @@
 		<servlet-name>Register</servlet-name>
 		<url-pattern>/Register</url-pattern>
 	</servlet-mapping>
+
+	<!-- hessian demo start -->
+	<servlet>
+		<servlet-name>hello</servlet-name>
+		<servlet-class>com.caucho.hessian.server.HessianServlet</servlet-class>
+		<init-param>
+			<param-name>service-class</param-name>
+			<param-value>com.noteshare.dataInteraction.hessian.services.impl.BasicServiceImpl</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	<!-- hessian demo end -->
 </web-app>
