@@ -79,6 +79,10 @@
 		<freemarker.version>2.3.23</freemarker.version>
 		<!-- hessian 轻量级的remoting onhttp工具，使用简单的方法提供了RMI的功能。 相比WebService，Hessian更简单、快捷，采用的是二进制RPC协议 -->
 		<hessian.version>4.0.51</hessian.version>
+		<!-- 引入jetty start-->
+		<jetty.version>6.1.26</jetty.version>
+		<jmx.version>5.1.12</jmx.version>
+		<!-- 引入jetty end-->
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -374,6 +378,18 @@
 		    <version>${hessian.version}</version>
 		</dependency>
 		<!-- hessian jar 包添加 end -->
+		<!-- 引入jetty start -->
+		<dependency>
+		    <groupId>org.mortbay.jetty</groupId>
+		    <artifactId>jetty</artifactId>
+		    <version>${jetty.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.mortbay.jetty</groupId>
+		    <artifactId>org.mortbay.jmx</artifactId>
+		    <version>${jmx.version}</version>
+		</dependency>
+		<!-- 引入jetty end -->
 	</dependencies>
 	<build>
 		<plugins>
