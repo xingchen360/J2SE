@@ -1,4 +1,4 @@
-package jdk8;
+package com.noteshare.jdk8;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,7 +14,8 @@ import org.junit.Test;
 
 /**
  * @Title:Lambda.java
- * @Description:Java 8的一个大亮点是引入Lambda表达式，使用它设计的代码会更加简洁。当开发者在编写Lambda表达式时，也会随之被编译成一个函数式接口
+ * @Description:Java 8的一个大亮点是引入Lambda表达式，使用它设计的代码会更加简洁，
+ * 当开发者在编写Lambda表达式时，也会随之被编译成一个函数式接口
  * @author:NoteShare
  * @date:2018年4月13日 上午11:40:30
  */
