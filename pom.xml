@@ -79,8 +79,14 @@
 		<freemarker.version>2.3.23</freemarker.version>
 		<!-- hessian 轻量级的remoting onhttp工具，使用简单的方法提供了RMI的功能。 相比WebService，Hessian更简单、快捷，采用的是二进制RPC协议 -->
 		<hessian.version>4.0.51</hessian.version>
+<<<<<<< HEAD
 		<!-- netty -->
 		<netty.version>4.1.24.Final</netty.version>
+=======
+		<!-- jetty start -->
+		<jetty.version>9.4.9.v20180320</jetty.version>
+		<!-- jetty end -->
+>>>>>>> 0ead9a684ed1719a3ae781defc3be11bb7390efc
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -376,12 +382,27 @@
 		    <version>${hessian.version}</version>
 		</dependency>
 		<!-- hessian jar 包添加 end -->
+<<<<<<< HEAD
 		<!-- netty jar -->
 		<dependency>
 		    <groupId>io.netty</groupId>
 		    <artifactId>netty-all</artifactId>
 		    <version>${netty.version}</version>
 		</dependency>
+=======
+		<!-- jetty start -->
+		<dependency>
+		    <groupId>org.eclipse.jetty</groupId>
+		    <artifactId>jetty-server</artifactId>
+		    <version>${jetty.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.eclipse.jetty</groupId>
+		    <artifactId>jetty-webapp</artifactId>
+		    <version>${jetty.version}</version>
+		</dependency>
+		<!-- jetty end -->
+>>>>>>> 0ead9a684ed1719a3ae781defc3be11bb7390efc
 	</dependencies>
 	<build>
 		<plugins>
@@ -389,9 +410,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<target>1.8</target>
-					<resource>1.8</resource>
-					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 		</plugins>
