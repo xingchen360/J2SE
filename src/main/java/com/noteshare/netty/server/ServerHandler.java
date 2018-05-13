@@ -6,7 +6,7 @@ import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
 public class ServerHandler extends ChannelHandlerAdapter {
-	@Override
+	/*@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
 		// do something msg
@@ -26,5 +26,5 @@ public class ServerHandler extends ChannelHandlerAdapter {
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 		cause.printStackTrace();
 		ctx.close();
-	}
+	}*/
 }

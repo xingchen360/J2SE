@@ -6,7 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.ReferenceCountUtil;
 
 public class ClientHandler extends ChannelHandlerAdapter{
-	@Override
+	/*@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		try {
 			ByteBuf buf = (ByteBuf) msg;
@@ -22,5 +22,5 @@ public class ClientHandler extends ChannelHandlerAdapter{
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 		cause.printStackTrace();
 		ctx.close();
-	}
+	}*/
 }
