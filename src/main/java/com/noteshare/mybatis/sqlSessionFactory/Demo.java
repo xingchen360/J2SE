@@ -1,6 +1,5 @@
 package com.noteshare.mybatis.sqlSessionFactory;
 
-
 /**
 * @Title:
 * @author  NoteShare
