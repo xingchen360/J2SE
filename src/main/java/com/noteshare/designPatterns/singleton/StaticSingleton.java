@@ -20,5 +20,4 @@ public class StaticSingleton {
 	static class InstanceHandler{
 		private static StaticSingleton staticSingleton = new StaticSingleton();
 	}
-	
 }

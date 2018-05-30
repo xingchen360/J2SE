@@ -7,6 +7,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Test;
 
 /**
 * @Title:
@@ -24,6 +25,7 @@ public class TestXmlSqlSessionFactory {
      * Create Date 	: 2017年10月30日 下午4:15:37
      * @throws
      */
+	@Test
     public void test1(){
         //配置文件路径
         String resource = "mybatis/mybatis-config.xml";
