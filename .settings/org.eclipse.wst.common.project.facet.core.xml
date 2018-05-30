@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
+<<<<<<< HEAD
   <runtime name="jdk1.8.0_77"/>
+=======
+  <runtime name="jre1.8.0._171"/>
+>>>>>>> be26121da900f87ae24b6278c93697769047d00f
   <installed facet="java" version="1.8"/>
 </faceted-project>
