@@ -5,7 +5,7 @@ import com.noteshare.dataInteraction.hessian.services.BasicService;
 
 public class BasicClient {
 	public static void main(String[] args) throws Exception {
-		String url ="http://127.0.0.1:8080/test/hello";
+		String url = "http://127.0.0.1:8080/test/hello";
 		HessianProxyFactory factory = new HessianProxyFactory();
 		BasicService basic = (BasicService) factory.create(BasicService.class, url);
 		System.out.println("Hello:" + basic.hello());
