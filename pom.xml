@@ -84,6 +84,9 @@
 		<!-- jetty start -->
 		<jetty.version>9.4.9.v20180320</jetty.version>
 		<!-- jetty end -->
+		<!-- spring start -->
+		<springbatch.version>3.0.8.RELEASE</springbatch.version>
+		<!-- spring end -->
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -397,6 +400,13 @@
 		    <version>${jetty.version}</version>
 		</dependency>
 		<!-- jetty end -->
+		<!-- spring start -->
+		<dependency>
+			<groupId>org.springframework.batch</groupId>
+			<artifactId>spring-batch-core</artifactId>
+			<version>${springbatch.version}</version>
+		</dependency>		
+		<!-- spring end -->		
 	</dependencies>
 	<build>
 		<plugins>
