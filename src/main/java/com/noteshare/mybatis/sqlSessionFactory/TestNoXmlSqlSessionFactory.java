@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 import org.apache.ibatis.datasource.pooled.PooledDataSourceFactory;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.transaction.TransactionFactory;
@@ -20,7 +21,6 @@ import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 * @history 2017年10月30日
 */
 public class TestNoXmlSqlSessionFactory {
-    @SuppressWarnings("unused")
 	public void test(){
         //此行代码是mybatis官网的代码jar里面未找到，提供下面的代码进行替换
         //DataSource dataSource = BlogDataSourceFactory.getBlogDataSource();
@@ -39,5 +39,7 @@ public class TestNoXmlSqlSessionFactory {
         Configuration configuration = new Configuration(environment);
         configuration.addMapper(Demo.class);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        sqlSession.close();
     }
 }

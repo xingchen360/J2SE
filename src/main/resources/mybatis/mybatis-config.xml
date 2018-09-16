@@ -3,6 +3,14 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+	<!-- 配置信息 -->
+	<properties resource="mybatis/mybatis-config.propertis">
+		<property name="username" value="root_xml"/>
+		<property name="password" value="root_xml"/>
+		<property name="driver" value="driver_xml"/>
+		<property name="url" value="url_xml"/>
+	</properties>
+	<!-- 配置环境信息 -->
 	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC" />
