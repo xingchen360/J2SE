@@ -87,6 +87,9 @@
 		<!-- spring start -->
 		<springbatch.version>3.0.8.RELEASE</springbatch.version>
 		<!-- spring end -->
+		<jacob.version>1.14.3</jacob.version>
+		<!-- office to html -->
+		<xdocreport.verstion>1.0.5</xdocreport.verstion>
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -188,6 +191,11 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>${apache.poi.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-scratchpad</artifactId>
+		    <version>${apache.poi.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.ant</groupId>
@@ -406,7 +414,24 @@
 			<artifactId>spring-batch-core</artifactId>
 			<version>${springbatch.version}</version>
 		</dependency>		
-		<!-- spring end -->		
+		<!-- spring end -->
+		<!-- jacob jar包导入 -->
+		<dependency>
+			<groupId>net.sf.jacob-project</groupId>
+			<artifactId>jacob</artifactId>
+			<version>${jacob.version}</version>
+		</dependency>	
+		<!-- office to html -->
+		<dependency>
+		    <groupId>fr.opensagres.xdocreport</groupId>
+		    <artifactId>fr.opensagres.xdocreport.document</artifactId>
+		    <version>${xdocreport.verstion}</version>
+		</dependency>
+		<dependency>  
+		    <groupId>fr.opensagres.xdocreport</groupId>  
+		    <artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>  
+		    <version>${xdocreport.verstion}</version>  
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
