@@ -451,4 +451,19 @@
     </attributes>
   </classpathentry>
   <classpathentry kind="var" path="M2_REPO/org/apache/poi/ooxml-schemas/1.1/ooxml-schemas-1.1.jar" sourcepath="M2_REPO/org/apache/poi/ooxml-schemas/1.1/ooxml-schemas-1.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/oltu/oauth2/org.apache.oltu.oauth2.client/1.0.2/org.apache.oltu.oauth2.client-1.0.2.jar" sourcepath="M2_REPO/org/apache/oltu/oauth2/org.apache.oltu.oauth2.client/1.0.2/org.apache.oltu.oauth2.client-1.0.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/apache/oltu/oauth2/org.apache.oltu.oauth2.client/1.0.2/org.apache.oltu.oauth2.client-1.0.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/oltu/oauth2/org.apache.oltu.oauth2.common/1.0.2/org.apache.oltu.oauth2.common-1.0.2.jar" sourcepath="M2_REPO/org/apache/oltu/oauth2/org.apache.oltu.oauth2.common/1.0.2/org.apache.oltu.oauth2.common-1.0.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/apache/oltu/oauth2/org.apache.oltu.oauth2.common/1.0.2/org.apache.oltu.oauth2.common-1.0.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/json/json/20140107/json-20140107.jar" sourcepath="M2_REPO/org/json/json/20140107/json-20140107-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/json/json/20140107/json-20140107-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
 </classpath>

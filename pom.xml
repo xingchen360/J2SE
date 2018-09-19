@@ -90,6 +90,8 @@
 		<jacob.version>1.14.3</jacob.version>
 		<!-- office to html -->
 		<xdocreport.verstion>1.0.5</xdocreport.verstion>
+		<!-- oauth2 -->
+		<oauth2client.version>1.0.2</oauth2client.version>
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -431,6 +433,12 @@
 		    <groupId>fr.opensagres.xdocreport</groupId>  
 		    <artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>  
 		    <version>${xdocreport.verstion}</version>  
+		</dependency>
+		<!--  -->
+		<dependency>
+		    <groupId>org.apache.oltu.oauth2</groupId>
+		    <artifactId>org.apache.oltu.oauth2.client</artifactId>
+		    <version>${oauth2client.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
