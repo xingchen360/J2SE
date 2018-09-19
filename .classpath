@@ -126,14 +126,34 @@
       <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/commons-net/commons-net/3.3/commons-net-3.3-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-ooxml/3.9/poi-ooxml-3.9.jar" sourcepath="M2_REPO/org/apache/poi/poi-ooxml/3.9/poi-ooxml-3.9-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi/3.9/poi-3.9.jar" sourcepath="M2_REPO/org/apache/poi/poi/3.9/poi-3.9-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-ooxml-schemas/3.9/poi-ooxml-schemas-3.9.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/xmlbeans/xmlbeans/2.3.0/xmlbeans-2.3.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-ooxml/3.15/poi-ooxml-3.15.jar" sourcepath="M2_REPO/org/apache/poi/poi-ooxml/3.15/poi-ooxml-3.15-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/apache/poi/poi-ooxml/3.15/poi-ooxml-3.15-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi/3.15/poi-3.15.jar" sourcepath="M2_REPO/org/apache/poi/poi/3.15/poi-3.15-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/apache/poi/poi/3.15/poi-3.15-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1.jar" sourcepath="M2_REPO/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/apache/commons/commons-collections4/4.1/commons-collections4-4.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-ooxml-schemas/3.15/poi-ooxml-schemas-3.15.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" sourcepath="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar" sourcepath="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-scratchpad/3.9/poi-scratchpad-3.9.jar" sourcepath="M2_REPO/org/apache/poi/poi-scratchpad/3.9/poi-scratchpad-3.9-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/github/virtuald/curvesapi/1.04/curvesapi-1.04.jar" sourcepath="M2_REPO/com/github/virtuald/curvesapi/1.04/curvesapi-1.04-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/com/github/virtuald/curvesapi/1.04/curvesapi-1.04-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/poi/poi-scratchpad/3.15/poi-scratchpad-3.15.jar" sourcepath="M2_REPO/org/apache/poi/poi-scratchpad/3.15/poi-scratchpad-3.15-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/apache/poi/poi-scratchpad/3.15/poi-scratchpad-3.15-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
   <classpathentry kind="var" path="M2_REPO/org/apache/ant/ant/1.9.4/ant-1.9.4.jar" sourcepath="M2_REPO/org/apache/ant/ant/1.9.4/ant-1.9.4-sources.jar">
     <attributes>
       <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/apache/ant/ant/1.9.4/ant-1.9.4-javadoc.jar!/" name="javadoc_location"/>
@@ -226,6 +246,8 @@
       <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/org/bouncycastle/bcprov-jdk15on/1.52/bcprov-jdk15on-1.52-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" sourcepath="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar" sourcepath="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/jaxen/jaxen/1.1.6/jaxen-1.1.6.jar" sourcepath="M2_REPO/jaxen/jaxen/1.1.6/jaxen-1.1.6-sources.jar">
     <attributes>
       <attribute value="jar:file:/D:/data/tool%20data/maven/Repositories/jaxen/jaxen/1.1.6/jaxen-1.1.6-javadoc.jar!/" name="javadoc_location"/>

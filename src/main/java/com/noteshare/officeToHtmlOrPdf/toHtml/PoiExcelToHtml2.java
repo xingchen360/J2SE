@@ -1,42 +1,39 @@
-package com.noteshare.officeToHtmlOrPdf;
+package com.noteshare.officeToHtmlOrPdf.toHtml;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.List;
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.hwpf.HWPFDocument;
-import org.apache.poi.hwpf.converter.PicturesManager;
-import org.apache.poi.hwpf.converter.WordToHtmlConverter;
-import org.apache.poi.hwpf.usermodel.Picture;
-import org.apache.poi.hwpf.usermodel.PictureType;
+import org.apache.poi.hssf.converter.ExcelToHtmlConverter;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+//import org.apache.poi.hwpf.usermodel.Picture;
 import org.w3c.dom.Document;
 
-public class PoiWordToHtml {
-	public static void main(String[] args) throws Throwable {
-		final String path = "D:\\test\\";
-		final String file = "1.doc";
+/**
+ * 带图片的转换测试失败,暂时先注释掉
+ * @author itnoteshare
+ *
+ */
+public class PoiExcelToHtml2 {
+	final static String path = "D:\\test\\excel\\";
+	final static String file = "1.xls";
+
+	public static void main(String args[]) throws Exception {
 		InputStream input = new FileInputStream(path + file);
-		HWPFDocument wordDocument = new HWPFDocument(input);
-		WordToHtmlConverter wordToHtmlConverter = new WordToHtmlConverter(
+		HSSFWorkbook excelBook = new HSSFWorkbook(input);
+		ExcelToHtmlConverter excelToHtmlConverter = new ExcelToHtmlConverter(
 				DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument());
-		wordToHtmlConverter.setPicturesManager(new PicturesManager() {
-			public String savePicture(byte[] content, PictureType pictureType, String suggestedName, float widthInches,
-					float heightInches) {
-				return suggestedName;
-			}
-		});
-		wordToHtmlConverter.processDocument(wordDocument);
-		List<?> pics = wordDocument.getPicturesTable().getAllPictures();
+		excelToHtmlConverter.processWorkbook(excelBook);
+		/*List<?> pics = excelBook.getAllPictures();
 		if (pics != null) {
 			for (int i = 0; i < pics.size(); i++) {
 				Picture pic = (Picture) pics.get(i);
@@ -46,8 +43,8 @@ public class PoiWordToHtml {
 					e.printStackTrace();
 				}
 			}
-		}
-		Document htmlDocument = wordToHtmlConverter.getDocument();
+		}*/
+		Document htmlDocument = excelToHtmlConverter.getDocument();
 		ByteArrayOutputStream outStream = new ByteArrayOutputStream();
 		DOMSource domSource = new DOMSource(htmlDocument);
 		StreamResult streamResult = new StreamResult(outStream);
@@ -59,6 +56,6 @@ public class PoiWordToHtml {
 		serializer.transform(domSource, streamResult);
 		outStream.close();
 		String content = new String(outStream.toByteArray());
-		FileUtils.writeStringToFile(new File(path, "人员选择系分.html"), content, "utf-8");
+		FileUtils.writeStringToFile(new File(path, "exportExcel.html"), content, "utf-8");
 	}
 }
