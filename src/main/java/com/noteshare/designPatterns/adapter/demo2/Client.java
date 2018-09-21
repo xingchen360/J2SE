@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.adapter2;
+package com.noteshare.designPatterns.adapter.demo2;
 
 /**
  * 对象适配器（采取对象组合的方式）推荐使用

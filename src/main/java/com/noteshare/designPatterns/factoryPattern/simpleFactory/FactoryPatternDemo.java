@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.simpleFactory;
+package com.noteshare.designPatterns.factoryPattern.simpleFactory;
 
 /**
  * 描述：

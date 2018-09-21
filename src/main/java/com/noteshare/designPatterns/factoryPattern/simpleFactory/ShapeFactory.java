@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.simpleFactory;
+package com.noteshare.designPatterns.factoryPattern.simpleFactory;
 
 import com.noteshare.designPatterns.factoryPattern.factorymethod.Circle;
 import com.noteshare.designPatterns.factoryPattern.factorymethod.Rectangle;

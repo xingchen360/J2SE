@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.adapter;
+package com.noteshare.designPatterns.adapter.demo1;
 
 /**
  * 类适配器（采取继承的方式）

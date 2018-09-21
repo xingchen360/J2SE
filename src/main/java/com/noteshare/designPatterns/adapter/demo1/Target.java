@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.adapter;
+package com.noteshare.designPatterns.adapter.demo1;
 /**
  * 抽象目接口
  * @author Administrator

@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.adapter2;
+package com.noteshare.designPatterns.adapter.demo2;
 
 public class Adapter implements Target{
 

@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.adapter2;
+package com.noteshare.designPatterns.adapter.demo2;
 
 public interface Target {
 	public void method1();

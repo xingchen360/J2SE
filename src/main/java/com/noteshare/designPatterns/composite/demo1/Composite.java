@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.composite;
+package com.noteshare.designPatterns.composite.demo1;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.adapter;
+package com.noteshare.designPatterns.adapter.demo1;
 /**
  * 适配器，也是要被适配的目标类。
  * @author Administrator

@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.composite;
+package com.noteshare.designPatterns.composite.demo1;
 
 public class Client {
 	public static void main(String[] args) {
