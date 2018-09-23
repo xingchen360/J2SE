@@ -1,42 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
-  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
-  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
-  <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar" sourcepath="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/D:/maven/repository/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" sourcepath="M2_REPO/commons-codec/commons-codec/1.6/commons-codec-1.6-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/D:/maven/repository/repository/commons-codec/commons-codec/1.6/commons-codec-1.6-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/net/sf/json-lib/json-lib/2.4/json-lib-2.4-jdk15.jar" sourcepath="M2_REPO/net/sf/json-lib/json-lib/2.4/json-lib-2.4-jdk15-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/D:/maven/repository/repository/net/sf/json-lib/json-lib/2.4/json-lib-2.4-jdk15-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.5/commons-lang-2.5.jar" sourcepath="M2_REPO/commons-lang/commons-lang/2.5/commons-lang-2.5-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/D:/maven/repository/repository/commons-lang/commons-lang/2.5/commons-lang-2.5-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6.jar" sourcepath="M2_REPO/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/D:/maven/repository/repository/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" sourcepath="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
-  <classpathentry kind="var" path="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/net/sf/jacob-project/jacob/1.14.3/jacob-1.14.3.jar" sourcepath="M2_REPO/net/sf/jacob-project/jacob/1.14.3/jacob-1.14.3-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/D:/maven/repository/repository/net/sf/jacob-project/jacob/1.14.3/jacob-1.14.3-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
+	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/activemq-all-5.15.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/ant-1.9.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/ant-launcher-1.9.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/bcprov-jdk15on-1.52.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/cglib-2.2.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/com.ibm.jbatch-tck-spi-1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-compress-1.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-configuration-1.10.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-dbutils-1.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-io-2.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-net-3.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/commons-pool-1.5.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/fastjson-1.2.16.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/fluent-hc-4.5.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/fr.opensagres.xdocreport.converter-1.0.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/fr.opensagres.xdocreport.core-1.0.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/fr.opensagres.xdocreport.document-1.0.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/fr.opensagres.xdocreport.template-1.0.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/hessian-4.0.51.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/itextpdf-5.5.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jackson-annotations-2.2.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jackson-core-2.2.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jackson-databind-2.2.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jacob-1.14.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javassist-3.20.0-GA.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.batch-api-1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jaxen-1.1.6.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jcl-over-slf4j-1.7.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jdom-2.0.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jettison-1.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jetty-http-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jetty-io-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jetty-security-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jetty-server-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jetty-servlet-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jetty-util-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jetty-webapp-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jetty-xml-9.4.9.v20180320.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/joda-time-2.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsch-0.1.54.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/json-20140107.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jsoup-1.10.3.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/log4j-api-2.9.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/log4j-core-2.9.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/logback-access-1.1.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/logback-classic-1.1.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/logback-core-1.1.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/mongo-java-driver-2.12.4.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/mybatis-3.4.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.27.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/netty-all-4.1.24.Final.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/ognl-3.1.15.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/ooxml-schemas-1.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/org.apache.oltu.oauth2.client-1.0.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/org.apache.oltu.oauth2.common-1.0.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/org.apache.poi.xwpf.converter.core-1.0.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/org.apache.poi.xwpf.converter.xhtml-1.0.5.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/pinyin4j-2.5.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/poi-ooxml-3.15.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/poi-scratchpad-3.15.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/servlet-api-6.0.53.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-aop-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-batch-core-3.0.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-batch-infrastructure-3.0.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-beans-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-context-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-core-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-expression-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-retry-1.1.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-tx-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/xmlpull-1.1.3.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/xpp3_min-1.1.4c.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/xstream-1.4.7.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/xz-1.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/zip4j-1.3.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
