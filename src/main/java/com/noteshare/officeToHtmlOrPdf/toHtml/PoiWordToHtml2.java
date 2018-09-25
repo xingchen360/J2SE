@@ -23,8 +23,8 @@ import org.w3c.dom.Document;
 
 public class PoiWordToHtml2 {
 	public static void main(String[] args) throws Throwable {
-		final String path = "D:\\test\\";
-		final String file = "1.doc";
+		final String path = "D:\\test\\word\\";
+		final String file = "传化涂料突发环境事件应急预案（20180906）.doc";
 		InputStream input = new FileInputStream(path + file);
 		HWPFDocument wordDocument = new HWPFDocument(input);
 		WordToHtmlConverter wordToHtmlConverter = new WordToHtmlConverter(
@@ -59,6 +59,6 @@ public class PoiWordToHtml2 {
 		serializer.transform(domSource, streamResult);
 		outStream.close();
 		String content = new String(outStream.toByteArray());
-		FileUtils.writeStringToFile(new File(path, "人员选择系分.html"), content, "utf-8");
+		FileUtils.writeStringToFile(new File(path, "传化涂料突发环境事件应急预案（20180906）.html"), content, "utf-8");
 	}
 }

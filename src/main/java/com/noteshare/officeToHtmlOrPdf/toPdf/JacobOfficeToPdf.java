@@ -116,6 +116,6 @@ public class JacobOfficeToPdf {
 
 	public static void main(String[] args) {
 		JacobOfficeToPdf d = new JacobOfficeToPdf();
-		d.convert2PDF("D:\\昆山市创建江苏省优秀管理城市台帐资料责任分解表.xls", "d:\\昆山市创建江苏省优秀管理城市台帐资料责任分解表.pdf");
+		d.convert2PDF("D:\\test\\流程定义3.xls", "D:\\test\\流程定义3.pdf");
 	}
 }
