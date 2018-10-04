@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.templatemethod;
+package com.noteshare.designPatterns.templatemethod.demo1;
 
 public class ConcreteClass extends AbstractClass{
 
@@ -16,5 +16,4 @@ public class ConcreteClass extends AbstractClass{
 	public void method3() {
 		System.out.println("step3");
 	}
-
 }

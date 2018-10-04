@@ -1,4 +1,4 @@
-package com.noteshare.designPatterns.templatemethod;
+package com.noteshare.designPatterns.templatemethod.demo1;
 
 public class Client {
 	public static void main(String[] args) {
