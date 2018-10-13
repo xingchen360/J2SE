@@ -1,4 +1,4 @@
-package com.noteshare.mongo;
+/*package com.noteshare.mongo;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -21,17 +21,17 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
 import com.mongodb.MongoException;
-
+//老版本2.8.2新版jar包已经不适合
 public class MongoDemo {
     private transient Logger log = LoggerFactory.getLogger(this.getClass());
     
     @Rule
     public TestName name = new TestName();
     
-    /** 
+    *//** 
      * MongoClient的实例代表数据库连接池，是线程安全的，可以被多线程共享，客户端在多线程条件下仅维持一个实例即可 
      * Mongo是非线程安全的，目前mongodb API中已经建议用MongoClient替代Mongo 
-     */  
+     *//*  
     private MongoClient mongoClient;  
     
     @Before
@@ -40,11 +40,11 @@ public class MongoDemo {
         MongoClientOptions.Builder build = new MongoClientOptions.Builder();          
         build.connectionsPerHost(50);   //与目标数据库能够建立的最大connection数量为50  
         build.threadsAllowedToBlockForConnectionMultiplier(50); //如果当前所有的connection都在使用中，则每个connection上可以有50个线程排队等待  
-        /* 
+         
          * 一个线程访问数据库的时候，在成功获取到一个可用数据库连接之前的最长等待时间为2分钟 
          * 这里比较危险，如果超过maxWaitTime都没有获取到这个连接的话，该线程就会抛出Exception 
          * 故这里设置的maxWaitTime应该足够大，以免由于排队线程过多造成的数据库访问失败 
-         */  
+           
         build.maxWaitTime(1000*60*2);  
         build.connectTimeout(1000*60*1);    //与数据库建立连接的timeout设置为1分钟  
           
@@ -52,9 +52,6 @@ public class MongoDemo {
         try {  
             //数据库连接实例  
             mongoClient = new MongoClient("127.0.0.1", myOptions);            
-        } catch (UnknownHostException e) {  
-            log.error(e.getMessage(), e);
-            throw e;
         } catch (MongoException e){  
             log.error(e.getMessage(), e);
             throw e;  
@@ -123,10 +120,10 @@ public class MongoDemo {
 
         DBObject update = new BasicDBObject();
         update.put("$set", new BasicDBObject("email", "uspcat@126.com"));
-        /*
+        
          * db.users.update({age: 25}, {$set: {email: 'uspcat@126.com'}}, false,
          * true); 相当于：update person set email = 'uspcat@126.com’ where age = 25;
-         */
+         
         System.out.println(coll.update(new BasicDBObject("age", 25), update, false, true).getN());
         // update的第三个参数设置为true，存在则更新，不存在则插入。
         // update的第四个参数设置为true，则批量更新搜索到的所有记录
@@ -157,9 +154,9 @@ public class MongoDemo {
     public void find2() {
         DBCollection coll = mongoClient.getDB("noteshare").getCollection("persons");
 
-        /*
+        
          * 查询age = 25的记录 db.persons.find({"age": 25});
-         */
+         
         DBObject query1 = new BasicDBObject("age", 25);
         DBCursor cursor1 = coll.find(query1, null);
         while (cursor1.hasNext()) {
@@ -170,9 +167,9 @@ public class MongoDemo {
             System.out.println("-------------------------");
         }
         System.out.println("*******************************查询age = 25的记录*****************************************");
-        /*
+        
          * 查询age > 25的记录 db.persons.find({age: {$gt: 22}});
-         */
+         
         DBObject query2 = new BasicDBObject();
         query2.put("age", new BasicDBObject("$gt", 25));// $lt[<] $gte[>=]
                                                         // $lte[<=]
@@ -185,10 +182,10 @@ public class MongoDemo {
             System.out.println("-------------------------");
         }
         System.out.println("****************************查询age > 25的记录********************************************");
-        /*
+        
          * 查询age >= 23 并且 age <= 26 并且英语成绩及格 db.persons.find({age: {$gte: 23,
          * $lte: 26},e:{$gte:60}});
-         */
+         
         BasicDBObject result = new BasicDBObject();
         result.put("$gte", 23);
         result.put("$lte", 26);
@@ -204,10 +201,10 @@ public class MongoDemo {
             System.out.println("-------------------------");
         }
         System.out.println("*******************************查询age >= 23 并且 age <= 26 并且英语成绩及格*****************************************");
-        /*
+        
          * 查询age < 25 或者 age >= 27 db.persons.find({$or: [{age: 27}, {age:
          * 25}]});
-         */
+         
         BasicDBObject result1 = new BasicDBObject("age", new BasicDBObject("$gte", 27));
         BasicDBObject result2 = new BasicDBObject("age", new BasicDBObject("$lt", 25));
         BasicDBList values = new BasicDBList();
@@ -224,9 +221,9 @@ public class MongoDemo {
             System.out.println("-------------------------");
         }
         System.out.println("****************************** 查询age < 25 或者 age >= 27******************************************");
-        /*
+        
          * 查询name中以zh开头的数据 db.persons.find({name: /li/});
-         */
+         
         DBObject query3 = new BasicDBObject();
         Pattern pattern = Pattern.compile("^zh", Pattern.CASE_INSENSITIVE);
         query3.put("name", pattern);
@@ -239,10 +236,10 @@ public class MongoDemo {
             System.out.println("-------------------------");
         }
         System.out.println("*****************************查询name中以zh开头的数据*******************************************");
-        /*
+        
          * 查询name = zhangsan, age > 22的数据 db.persons.find({name: 'zhangsan',
          * age: {$gt: 22}});
-         */
+         
         DBObject query4 = new BasicDBObject();
         query4.put("age", new BasicDBObject("$gt", 22));
         query4.put("name", "jim");
@@ -261,12 +258,12 @@ public class MongoDemo {
     @Test
     public void findByPage() {
         DBCollection coll = mongoClient.getDB("noteshare").getCollection("persons");
-        /*
+        
          * 查询前5条数据 db.persons.find().limit(5); 查询10条以后的数据
          * db.persons.find().skip(10); 查询在5-10之间的数据
          * db.persons.find().limit(10).skip(5);
          * limit是pageSize，skip是(N页)*pageSize
-         */
+         
         DBCursor cursor = coll.find(null, null).limit(5).skip(0);
         System.out.println(coll.find(null, null).length());
         while (cursor.hasNext()) {
@@ -277,5 +274,5 @@ public class MongoDemo {
             System.out.println("-------------------------");
         }
     }
-
 }
+*/

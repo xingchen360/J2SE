@@ -48,7 +48,7 @@
 		<!-- cglib -->
 		<cglib.version>2.2.2</cglib.version>
 		<!-- mongodb -->
-		<mongo.version>2.12.4</mongo.version>
+		<mongo.version>3.8.2</mongo.version>
 		<!--bouncy castle -->
 		<bouncy.castle.version>1.52</bouncy.castle.version>
 		<!-- xml -->
