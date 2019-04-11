@@ -21,7 +21,7 @@ public class AnnotationDemo {
     }
  
     @Deprecated
-    @MethodInfo(comments = "deprecated method", date = "June 12 2015")
+    @MethodInfo(comments = "deprecated method", date = "June 12 2015",value={1,2,3})
     public static void outdatedMethod() {
         System.out.println("outdated method, don't use it.");
     }

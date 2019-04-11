@@ -39,6 +39,7 @@ public @interface MethodInfo {
         RED,
         GREEN
     }
+	int[] value() default {1,2};
     String author() default "NoteShare";
     String date();
     int revision() default 1;
