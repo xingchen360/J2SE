@@ -1,9 +1,5 @@
 package com.noteshare.thread.threadlocal;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-import org.junit.Test;
-
 /**
  * @Title:ThreadLocalTest1.java
  * @Description:ThreadLocal测试类1
@@ -29,30 +25,21 @@ public class ThreadLocalTest1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		final ThreadLocalTest1 test = new ThreadLocalTest1();
-
 		test.set();
 		System.out.println(test.getLong());
 		System.out.println(test.getString());
 
 		Thread thread1 = new Thread() {
 			public void run() {
-				test.set();
-				System.out.println(test.getLong());
-				System.out.println(test.getString());
+				//test.set();
+				System.out.println(test.getLong() + "===");
+				System.out.println(test.getString() + "===");
 			};
 		};
 		thread1.start();
 		thread1.join();
 
-		System.out.println(test.getLong());
-		System.out.println(test.getString());
-	}
-	
-	@Test
-	public void test(){
-		AtomicInteger ai = new AtomicInteger(2);
-		System.out.println(ai.get());
-		Thread t = Thread.currentThread();
-		System.out.println(t);
+		System.out.println(test.getLong() + "---");
+		System.out.println(test.getString() + "---");
 	}
 }
