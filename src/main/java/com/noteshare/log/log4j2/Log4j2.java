@@ -13,7 +13,7 @@ import org.apache.logging.log4j.core.config.Configurator;
 
 /**
  * @ClassName			: Log4j2 
- * @Description			: TODO
+ * @Description			: Log4j2测试类
  * @author 				： NoteShare 
  * @date 				： 2017年10月6日 下午3:44:15
  */
