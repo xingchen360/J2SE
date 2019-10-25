@@ -7,4 +7,7 @@ package com.noteshare.enums;
  */
 public enum ColorEnum {
 	RED, GREEN, YELLOW, BLUE;
+	public static void main(String[] args) {
+		System.out.println(ColorEnum.RED.name().equals("RED"));
+	}
 }

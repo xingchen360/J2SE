@@ -29,7 +29,7 @@
 		<commons.dbutils.version>1.6</commons.dbutils.version>
 		<commons.configuration.version>1.10</commons.configuration.version>
 		<commons.net.version>3.3</commons.net.version>
-		<!-- apache tools-->
+		<!-- apache tools -->
 		<apache.httpcomponents.version>4.5.2</apache.httpcomponents.version>
 		<apache.poi.version>3.15</apache.poi.version>
 		<apache.ant.version>1.9.4</apache.ant.version>
@@ -56,7 +56,7 @@
 		<dom4j.jaxen.version>1.1.6</dom4j.jaxen.version>
 		<jdom.version>2.0.2</jdom.version>
 		<xstream.version>1.4.7</xstream.version>
-		<!-- itext  -->
+		<!-- itext -->
 		<itext.version>4.2.2</itext.version>
 		<!-- easymock -->
 		<easymock.version>3.4</easymock.version>
@@ -92,6 +92,7 @@
 		<xdocreport.verstion>1.0.5</xdocreport.verstion>
 		<!-- oauth2 -->
 		<oauth2client.version>1.0.2</oauth2client.version>
+		<spring.version>4.2.5.RELEASE</spring.version>
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -122,7 +123,7 @@
 			<artifactId>logback-access</artifactId>
 			<version>${logback.version}</version>
 		</dependency>
-		
+
 		<!-- jdbc driver -->
 		<dependency>
 			<groupId>${jdbc.driver.groupId}</groupId>
@@ -130,7 +131,7 @@
 			<version>${jdbc.driver.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<!-- 加入commons tools依赖包 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -178,26 +179,26 @@
 			<version>${commons.dbutils.version}</version>
 		</dependency>
 		<dependency>
-            <groupId>commons-configuration</groupId>
-            <artifactId>commons-configuration</artifactId>
-            <version>${commons.configuration.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-net</groupId>
-            <artifactId>commons-net</artifactId>
-            <version>${commons.net.version}</version>
-        </dependency>
-        
-        <!-- apache tools -->
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>${commons.configuration.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>${commons.net.version}</version>
+		</dependency>
+
+		<!-- apache tools -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>${apache.poi.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.apache.poi</groupId>
-		    <artifactId>poi-scratchpad</artifactId>
-		    <version>${apache.poi.version}</version>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>${apache.poi.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.ant</groupId>
@@ -214,14 +215,14 @@
 			<artifactId>httpmime</artifactId>
 			<version>${apache.httpcomponents.version}</version>
 		</dependency>
-		
+
 		<!-- 加入sftp依赖包 -->
 		<dependency>
 			<groupId>com.jcraft</groupId>
 			<artifactId>jsch</artifactId>
 			<version>${jsch.version}</version>
 		</dependency>
-		
+
 		<!-- joda time -->
 		<dependency>
 			<groupId>joda-time</groupId>
@@ -253,14 +254,14 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson.version}</version>
 		</dependency>
-		
+
 		<!-- Java JNA -->
 		<dependency>
 			<groupId>net.java.dev.jna</groupId>
 			<artifactId>jna</artifactId>
 			<version>${jna.version}</version>
 		</dependency>
-		
+
 		<!-- 加入CGLIB 依赖包 -->
 		<dependency>
 			<groupId>cglib</groupId>
@@ -281,7 +282,7 @@
 			<artifactId>bcprov-jdk15on</artifactId>
 			<version>${bouncy.castle.version}</version>
 		</dependency>
-		
+
 		<!-- ***********************XML*********************** -->
 		<!-- 加入dom4j 依赖包 -->
 		<dependency>
@@ -311,103 +312,103 @@
 		<!-- ***********************XML*********************** -->
 		<!-- itext -->
 		<dependency>
-		    <groupId>com.lowagie</groupId>
-		    <artifactId>itext</artifactId>
-		    <version>${itext.version}</version>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>${itext.version}</version>
 		</dependency>
 		<!-- easymock -->
 		<dependency>
-		    <groupId>org.easymock</groupId>
-		    <artifactId>easymock</artifactId>
-		    <version>${easymock.version}</version>
-		    <scope>test</scope>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>${easymock.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- servlet-api -->
 		<dependency>
-		    <groupId>org.apache.tomcat</groupId>
-		    <artifactId>servlet-api</artifactId>
-		    <version>${servletapi.version}</version>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servletapi.version}</version>
 		</dependency>
 		<!-- log4j2 start -->
 		<dependency>
-		    <groupId>org.apache.logging.log4j</groupId>
-		    <artifactId>log4j-core</artifactId>
-		    <version>${log4j2.version}</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j2.version}</version>
 		</dependency>
 		<!-- log4j2 end -->
-		
-		<!-- Mybatis 相关jar  start -->
+
+		<!-- Mybatis 相关jar start -->
 		<!-- 基础包 -->
 		<dependency>
-		    <groupId>org.mybatis</groupId>
-		    <artifactId>mybatis</artifactId>
-		    <version>${mybatis.version}</version>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
 		</dependency>
-		<!-- 代码生成工具包 MyBatis Generator  a code generator for MyBatis and iBatis.-->
+		<!-- 代码生成工具包 MyBatis Generator a code generator for MyBatis and iBatis. -->
 		<dependency>
-		    <groupId>org.mybatis.generator</groupId>
-		    <artifactId>mybatis-generator-core</artifactId>
-		    <scope>test</scope>
-		    <version>${mybatisgenerator.version}</version>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-core</artifactId>
+			<scope>test</scope>
+			<version>${mybatisgenerator.version}</version>
 		</dependency>
 		<!-- 此jar是mybatis Compile Dependencies依赖的jar，此处只是下载下来学习下无其他作用 -->
 		<dependency>
-		    <groupId>ognl</groupId>
-		    <artifactId>ognl</artifactId>
-		    <version>${mybatisognl.version}</version>
+			<groupId>ognl</groupId>
+			<artifactId>ognl</artifactId>
+			<version>${mybatisognl.version}</version>
 		</dependency>
-		<!-- Mybatis 相关jar  end -->
+		<!-- Mybatis 相关jar end -->
 		<!-- jsoup start -->
 		<dependency>
-		    <groupId>org.jsoup</groupId>
-		    <artifactId>jsoup</artifactId>
-		    <version>${jsoup.version}</version>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${jsoup.version}</version>
 		</dependency>
 		<!-- jsoup end -->
-		<!-- zip压缩工具包  start -->
+		<!-- zip压缩工具包 start -->
 		<dependency>
-		    <groupId>net.lingala.zip4j</groupId>
-		    <artifactId>zip4j</artifactId>
-		    <version>${zip4j.version}</version>
+			<groupId>net.lingala.zip4j</groupId>
+			<artifactId>zip4j</artifactId>
+			<version>${zip4j.version}</version>
 		</dependency>
-		<!-- zip压缩工具包  end -->
+		<!-- zip压缩工具包 end -->
 		<!-- activemq jar 包添加 start -->
 		<dependency>
-		    <groupId>org.apache.activemq</groupId>
-		    <artifactId>activemq-all</artifactId>
-		    <version>${activemqAll.version}</version>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>${activemqAll.version}</version>
 		</dependency>
 		<!-- activemq jar 包添加 end -->
 		<!-- freemarker jar 包添加 start -->
 		<dependency>
-		    <groupId>org.freemarker</groupId>
-		    <artifactId>freemarker</artifactId>
-		    <version>${freemarker.version}</version>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
 		</dependency>
 		<!-- freemarker jar 包添加 end -->
 		<!-- hessian jar 包添加 start -->
 		<dependency>
-		    <groupId>com.caucho</groupId>
-		    <artifactId>hessian</artifactId>
-		    <version>${hessian.version}</version>
+			<groupId>com.caucho</groupId>
+			<artifactId>hessian</artifactId>
+			<version>${hessian.version}</version>
 		</dependency>
 		<!-- hessian jar 包添加 end -->
 		<!-- netty jar -->
 		<dependency>
-		    <groupId>io.netty</groupId>
-		    <artifactId>netty-all</artifactId>
-		    <version>${netty.version}</version>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>${netty.version}</version>
 		</dependency>
 		<!-- jetty start -->
 		<dependency>
-		    <groupId>org.eclipse.jetty</groupId>
-		    <artifactId>jetty-server</artifactId>
-		    <version>${jetty.version}</version>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>${jetty.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.eclipse.jetty</groupId>
-		    <artifactId>jetty-webapp</artifactId>
-		    <version>${jetty.version}</version>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<version>${jetty.version}</version>
 		</dependency>
 		<!-- jetty end -->
 		<!-- spring start -->
@@ -415,31 +416,64 @@
 			<groupId>org.springframework.batch</groupId>
 			<artifactId>spring-batch-core</artifactId>
 			<version>${springbatch.version}</version>
-		</dependency>		
+		</dependency>
 		<!-- spring end -->
 		<!-- jacob jar包导入 -->
 		<dependency>
 			<groupId>net.sf.jacob-project</groupId>
 			<artifactId>jacob</artifactId>
 			<version>${jacob.version}</version>
-		</dependency>	
+		</dependency>
 		<!-- office to html -->
 		<dependency>
-		    <groupId>fr.opensagres.xdocreport</groupId>
-		    <artifactId>fr.opensagres.xdocreport.document</artifactId>
-		    <version>${xdocreport.verstion}</version>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.document</artifactId>
+			<version>${xdocreport.verstion}</version>
 		</dependency>
-		<dependency>  
-		    <groupId>fr.opensagres.xdocreport</groupId>  
-		    <artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>  
-		    <version>${xdocreport.verstion}</version>  
-		</dependency>
-		<!--  -->
 		<dependency>
-		    <groupId>org.apache.oltu.oauth2</groupId>
-		    <artifactId>org.apache.oltu.oauth2.client</artifactId>
-		    <version>${oauth2client.version}</version>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>
+			<version>${xdocreport.verstion}</version>
 		</dependency>
+		<!-- -->
+		<dependency>
+			<groupId>org.apache.oltu.oauth2</groupId>
+			<artifactId>org.apache.oltu.oauth2.client</artifactId>
+			<version>${oauth2client.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<!-- 自己上传到私服上
+		<dependency>
+			<groupId>com.dingtalk.open</groupId>
+			<artifactId>client-sdk.api</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dingtalk.open</groupId>
+			<artifactId>client-sdk.common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dingtalk.open</groupId>
+			<artifactId>client-sdk.core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dingtalk.open</groupId>
+			<artifactId>client-sdk.spring</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dingtalk.open</groupId>
+			<artifactId>taobao-sdk-java</artifactId>
+			<version>1.0.0</version>
+		</dependency> -->
 	</dependencies>
 	<build>
 		<plugins>
@@ -448,8 +482,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 		</plugins>
