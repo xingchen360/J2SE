@@ -1,4 +1,4 @@
-package com.noteshare.officeToHtmlOrPdf.export;
+package com.noteshare.office.word.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -84,13 +84,7 @@ import org.docx4j.wml.Tr;
 import org.docx4j.wml.TrPr;
 import org.docx4j.wml.U;
 import org.docx4j.wml.UnderlineEnumeration;
-/**
- * 
- * @Title:Docx4jUtil.java
- * @Description:https://blog.csdn.net/weixin_34295316/article/details/86022702
- * @author:NoteShare
- * @date:2019年11月27日 下午7:52:41
- */
+
 public class Docx4jUtil {
 
     /*------------------------------------other---------------------------------------------------  */
