@@ -1,9 +1,9 @@
 package com.noteshare.easymock;
 
-import static org.easymock.EasyMock.createMock;
+/*import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.expectLastCall;
 import static org.easymock.EasyMock.replay;
-import static org.easymock.EasyMock.verify;
+import static org.easymock.EasyMock.verify;*/
 
 import java.io.IOException;
 
@@ -20,7 +20,7 @@ public class ResultServletTest {
     private HttpServletRequest mockRequest;
     private HttpServletResponse mockResponse;
 
-    @Before
+    /*@Before
     public void setUp() {
         servlet = new PostServlet();
         mockRequest = createMock(HttpServletRequest.class); // 加载
@@ -44,6 +44,6 @@ public class ResultServletTest {
         replay(mockRequest); // 回放
         replay(mockResponse);
         servlet.doPost(mockRequest, mockResponse); // 调用
-    }
+    }*/
 
 }

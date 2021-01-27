@@ -18,7 +18,7 @@ public class Modifier{
 	 */
 	 void d()
 	{
-		
+		System.out.println("=============b=========");
 	}
 	 
 	/**3
@@ -29,7 +29,7 @@ public class Modifier{
 	 */
 	protected void b()
 	{
-			
+		System.out.println("=============");
 	}
 		
 	/**4

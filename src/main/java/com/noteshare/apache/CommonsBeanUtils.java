@@ -1,6 +1,7 @@
 package com.noteshare.apache;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,10 +30,18 @@ public class CommonsBeanUtils {
     
     @Test
     public void cloneBean() throws IllegalAccessException, InstantiationException, InvocationTargetException, NoSuchMethodException{
-        Person person = new Person("admin","password",null,null);
+        Person person = new Person("admin","password",new Date(),null);
         /*克隆对象*/
         Person person2 = (Person) BeanUtils.cloneBean(person);
         System.out.println("克隆对象>>" + person2);
+        System.out.println(person.getUsername());
+        System.out.println(person.getUsername() == person2.getUsername());
+        System.out.println(person.getBirthday() == person2.getBirthday());
+        System.out.println(new Date() == new Date());
+        Date birthDay = person.getBirthday();
+        birthDay.setTime(new Date().getTime());
+        System.out.println(person2.getBirthday());
+        System.out.println(person.getBirthday() == person2.getBirthday());
     }
     
     @SuppressWarnings("unchecked")

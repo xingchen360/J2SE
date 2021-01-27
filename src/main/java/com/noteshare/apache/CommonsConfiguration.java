@@ -1,5 +1,7 @@
 package com.noteshare.apache;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Iterator;
 
 import org.apache.commons.configuration.ConfigurationException;
@@ -7,9 +9,10 @@ import org.apache.commons.configuration.PropertiesConfiguration;
 
 public class CommonsConfiguration {
     
-    public void configuration() throws ConfigurationException {
+    public void configuration() throws ConfigurationException, UnsupportedEncodingException {
     	String url = getClass().getClassLoader().getResource("info.properties").getPath();
         System.out.println(url);
+        url = URLDecoder.decode(url,"UTF-8");
         PropertiesConfiguration config = new PropertiesConfiguration(url);
         config.setProperty("age", "22");
         config.save();
@@ -27,7 +30,7 @@ public class CommonsConfiguration {
         }
     }
 
-    public static void main(String[] args) throws ConfigurationException {
+    public static void main(String[] args) throws ConfigurationException, UnsupportedEncodingException {
         CommonsConfiguration config = new CommonsConfiguration();
         config.configuration();
     }

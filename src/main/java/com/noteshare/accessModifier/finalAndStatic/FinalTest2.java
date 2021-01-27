@@ -29,7 +29,7 @@ public class FinalTest2 extends FinalTest1{
      * Create Date 	: 2017年11月7日 下午4:22:13
      * @throws
      */
-   /* public static final void test2(){
+    /*public static final void test2(){
         System.out.println("FinalTest2-test1");
     }*/
     

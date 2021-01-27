@@ -59,7 +59,7 @@
 		<!-- itext -->
 		<itext.version>4.2.2</itext.version>
 		<!-- easymock -->
-		<easymock.version>3.4</easymock.version>
+		<easymock.version>4.2</easymock.version>
 		<!-- servletapi -->
 		<servletapi.version>6.0.53</servletapi.version>
 		<!-- log4j2 -->
@@ -94,7 +94,7 @@
 		<oauth2client.version>1.0.2</oauth2client.version>
 		<spring.version>4.2.5.RELEASE</spring.version>
 		<!-- 导出word -->
-		<spring.version>docx4j.version</spring.version>
+		<docx4j.version>6.1.2</docx4j.version>
 	</properties>
 	<dependencies>
 		<!-- 加入junit依赖包 -->
@@ -325,6 +325,7 @@
 			<version>${easymock.version}</version>
 			<scope>test</scope>
 		</dependency>
+
 		<!-- servlet-api -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
@@ -449,40 +450,50 @@
 			<artifactId>spring-web</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
         <!-- https://mvnrepository.com/artifact/org.docx4j/docx4j -->
 		<dependency>
 		    <groupId>org.docx4j</groupId>
 		    <artifactId>docx4j</artifactId>
 		    <version>${docx4j.version}</version>
 		</dependency>
-		
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.1</version>
+			<scope>compile</scope>
+		</dependency>
 		<!-- 自己上传到私服上
-		<dependency>
-			<groupId>com.dingtalk.open</groupId>
-			<artifactId>client-sdk.api</artifactId>
-			<version>1.0.2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.dingtalk.open</groupId>
-			<artifactId>client-sdk.common</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.dingtalk.open</groupId>
-			<artifactId>client-sdk.core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.dingtalk.open</groupId>
-			<artifactId>client-sdk.spring</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.dingtalk.open</groupId>
-			<artifactId>taobao-sdk-java</artifactId>
-			<version>1.0.0</version>
-		</dependency> -->
+        <dependency>
+            <groupId>com.dingtalk.open</groupId>
+            <artifactId>client-sdk.api</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dingtalk.open</groupId>
+            <artifactId>client-sdk.common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dingtalk.open</groupId>
+            <artifactId>client-sdk.core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dingtalk.open</groupId>
+            <artifactId>client-sdk.spring</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dingtalk.open</groupId>
+            <artifactId>taobao-sdk-java</artifactId>
+            <version>1.0.0</version>
+        </dependency> -->
 	</dependencies>
 	<build>
 		<plugins>
