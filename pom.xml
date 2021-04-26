@@ -20,7 +20,7 @@
 		<!-- commons tools -->
 		<commons.lang3.version>3.1</commons.lang3.version>
 		<commons.compress>1.5</commons.compress>
-		<commons.io.version>2.3</commons.io.version>
+		<commons.io.version>2.7</commons.io.version>
 		<commons.collections.version>3.2.1</commons.collections.version>
 		<commons.beanutils.version>1.8.3</commons.beanutils.version>
 		<commons.codec.version>1.6</commons.codec.version>
