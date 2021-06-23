@@ -82,7 +82,7 @@
 		<!-- netty -->
 		<netty.version>4.1.24.Final</netty.version>
 		<!-- jetty start -->
-		<jetty.version>9.4.9.v20180320</jetty.version>
+		<jetty.version>9.4.41.v20210516</jetty.version>
 		<!-- jetty end -->
 		<!-- spring start -->
 		<springbatch.version>3.0.8.RELEASE</springbatch.version>
