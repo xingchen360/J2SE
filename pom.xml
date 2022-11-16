@@ -40,7 +40,7 @@
 		<!-- pinyin -->
 		<pinyin.version>2.5.0</pinyin.version>
 		<!-- json -->
-		<jackson.version>2.2.3</jackson.version>
+		<jackson.version>2.12.7.1</jackson.version>
 		<json.lib.version>2.4</json.lib.version>
 		<alibaba.fastjson.version>1.2.16</alibaba.fastjson.version>
 		<!-- Java JNA -->
