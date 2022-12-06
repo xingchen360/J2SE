@@ -28,7 +28,7 @@
 		<commons.dbcp.version>1.4</commons.dbcp.version>
 		<commons.dbutils.version>1.6</commons.dbutils.version>
 		<commons.configuration.version>1.10</commons.configuration.version>
-		<commons.net.version>3.3</commons.net.version>
+		<commons.net.version>3.9.0</commons.net.version>
 		<!-- apache tools -->
 		<apache.httpcomponents.version>4.5.2</apache.httpcomponents.version>
 		<apache.poi.version>3.15</apache.poi.version>
